@@ -12,7 +12,7 @@ import { productsSlice } from '../store/productsSlice'
 
 const ProductsSrceen = ({ navigation }) => {
   const products = useSelector((state) => state.products.products)
-  const dispatch = useDispatch({})
+  const dispatch = useDispatch()
   // or use the useNavigation hook
   // const navigation = useNavigation()
   return (
