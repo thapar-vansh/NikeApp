@@ -18,6 +18,7 @@ const ProductDetailsScreen = ({ route }) => {
   const { data, isLoading, error } = useGetProductQuery(id)
 
   // const product = useSelector((state) => state.products.selectedProduct)
+  const product = data?.data
   const dispatch = useDispatch()
 
   const { width } = useWindowDimensions()
@@ -32,7 +33,6 @@ const ProductDetailsScreen = ({ route }) => {
     return <Text>{error.error}</Text>
   }
 
-  const product = data.data
   return (
     <View>
       <ScrollView>
